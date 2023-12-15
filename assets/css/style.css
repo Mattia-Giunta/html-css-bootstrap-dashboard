@@ -1,0 +1,10 @@
+.mg_logo_mobile{
+    width: 50px;
+}
+
+main #sidebar{
+    background-image: url(../img/sidebar-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

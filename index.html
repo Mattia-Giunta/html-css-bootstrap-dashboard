@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
 
     <meta charset="UTF-8">
@@ -24,10 +24,10 @@
 
 <body>
 
-    <header style="height: 65px;">
+    <header class="fixed-top" style="height: 65px;">
 
         <nav class="navbar navbar-expand-md bg-body-tertiary">
-            
+
             <div class="container-fluid flex-nowrap bg-white">
 
                 <a class="navbar-brand" href="#">
@@ -37,7 +37,7 @@
 
                     <!-- logo standard -->
                     <img class="mg_logo_standard img-fluid d-none d-md-block " src="./assets/img/logo.svg" alt="">
-    
+
                 </a>
 
               <!-- search bar -->
@@ -106,7 +106,7 @@
                     </ul>
 
                 </div>
-              
+
             </div>
         </nav>
 
@@ -114,7 +114,7 @@
 
 
 
-    <main style=" height:calc(100vh - 65px);" class="d-flex">
+    <main style=" margin-top: 65px; height:calc(100vh - 65px);" class="d-flex">
 
 
         <!-- sidebar -->
@@ -132,7 +132,7 @@
 
                     </a>
                 </li>
-              
+
                 <li>
                     <a href="#" class="nav-link py-3  rounded-0 text-light d-flex align-items-center gap-2" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
 
@@ -166,29 +166,592 @@
         </div>
 
 
-        <div class="" style="width: 100%;">
+        <div class="overflow-auto" style="width: 100%;">
 
             <!-- lightblue bar top -->
-            <div class="container-fluid text-bg-primary d-flex flex-column gap-3">
+            <div class="container-fluid text-bg-primary d-flex flex-column gap-3 pt-4 flex-lg-row justify-content-between pe-lg-5">
 
-                <div class="d-flex align-items-center pt-4 gap-4">
+                <div class="d-flex align-items-center gap-4 order-lg-3 me-lg-5">
 
                     <h5>Nuovo Studente</h5>
 
-                    <a href="#" class="text-decoration-none text-light border border-1 rounded ratio-1x1" style="padding-block: 8px; padding-inline: 12px;">
-                        <i class="fa-solid fa-plus"></i>
-                    </a>
+                    <div>
+
+                        <button class="btn btn-primary border border-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <!-- offcanvas -->
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+                            <div class="offcanvas-header">
+
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                            </div>
+
+                            <div class="offcanvas-body">
+
+                                <div class="">
+
+                                    <form class="needs-validation" novalidate="">
+                                        <div class="row g-3">
+
+                                            <!-- first name -->
+                                            <div class="col-6">
+
+                                                <label for="firstName" class="form-label">Nome</label>
+
+                                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+
+                                                <div class="invalid-feedback">
+                                                    Valid first name is required.
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Last name -->
+                                            <div class="col-6">
+
+                                                <label for="lastName" class="form-label">Cognome</label>
+
+                                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+
+                                                <div class="invalid-feedback">
+                                                 Valid last name is required.
+                                                </div>
+
+                                            </div>
+
+
+                                            <!-- email 1 -->
+                                            <div class="col-6">
+
+                                                <label for="email1" class="form-label">Email</label>
+
+                                                <div class="input-group has-validation">
+
+                                                    <span class="input-group-text">@</span>
+
+                                                    <input type="email" class="form-control" id="email1" required="">
+
+                                                    <div class="invalid-feedback">
+                                                        Please enter a valid email address.
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <!-- password 1 -->
+                                            <div class="col-6">
+
+                                                <label for="password1" class="form-label">Password</label>
+
+                                                <input type="password" class="form-control" id="password1"  required="">
+
+                                                <div class="invalid-feedback">
+                                                    Please enter your Password.
+                                                </div>
+
+                                            </div>
+
+                                            <!-- email 2  -->
+                                            <div class="col-6">
+
+                                                <label for="email2" class="form-label">Email</label>
+
+                                                <div class="input-group has-validation">
+
+                                                    <span class="input-group-text">@</span>
+
+                                                    <input type="email" class="form-control" id="email2" required="">
+
+                                                    <div class="invalid-feedback">
+                                                        Please enter a valid email address.
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <!-- password 2 -->
+                                            <div class="col-6">
+
+                                                <label for="password2" class="form-label">Password</label>
+
+                                                <input type="password" class="form-control" id="password2"  required="">
+
+                                                <div class="invalid-feedback">
+                                                    Please enter your Password.
+                                                </div>
+
+                                            </div>
+
+
+                                            <!-- address -->
+                                            <div class="col-12">
+
+                                                <label for="address" class="form-label">Indirizzo</label>
+
+                                                <input type="text" class="form-control" id="address" required="">
+
+                                                <div class="invalid-feedback">
+                                                    Please enter your address.
+                                                </div>
+
+                                            </div>
+
+                                            <!-- city -->
+                                            <div class="col-5">
+                                                <label for="city" class="form-label">Città</label>
+
+                                                <select class="form-select" id="city" required="">
+                                                    <option value="">Choose...</option>
+                                                    <option>Milano</option>
+                                                    <option>Roma</option>
+                                                    <option>Firenze</option>
+                                                    <option>Venezia</option>
+                                                    <option>Napoli</option>
+                                                </select>
+
+                                                <div class="invalid-feedback">
+                                                 Please select a valid city.
+                                                </div>
+                                            </div>
+
+                                            <!-- state -->
+                                            <div class="col-4">
+                                                <label for="state" class="form-label">Stato</label>
+
+                                                <select class="form-select" id="state" required="">
+                                                    <option value="">Choose...</option>
+                                                    <option>Italia</option>
+                                                    <option>Germania</option>
+                                                    <option>Francia</option>
+                                                    <option>Spagna</option>
+                                                    <option>Grecia</option>
+                                                </select>
+
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid state.
+                                                </div>
+                                            </div>
+
+                                            <!-- cap -->
+                                            <div class="col-3">
+                                                <label for="cap" class="form-label">Zip</label>
+
+                                                <input type="text" class="form-control" id="cap" placeholder="" required="">
+
+                                                <div class="invalid-feedback">
+                                                    CAP code required.
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                      <hr class="my-4">
+
+                                      <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="same-address">
+                                        <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                                      </div>
+
+                                      <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="save-info">
+                                        <label class="form-check-label" for="save-info">Save this information for next time</label>
+                                      </div>
+
+                                      <hr class="my-4">
+
+                                      
+
+                                      <hr class="my-4">
+
+                                      <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+                                    </form>
+                                  </div>
+
+
+
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <div class="d-flex align-items-center gap-2">
+                <div class="order-lg-1">
+                    <div class="d-flex align-items-center gap-2">
 
-                    <h1>Boolean</h1>
-                    <span class="badge rounded-pill bg-dark bg-opacity-25 ">Piano blaze</span>
+                        <h1>Boolean</h1>
+                        <span class="badge rounded-pill bg-dark bg-opacity-25 ">Piano blaze</span>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ">
+
+                        <span class="badge rounded-pill bg-dark bg-opacity-25 ">3 app</span>
+
+                        <i class="fa-solid fa-angles-right"></i>
+
+                        <span class="badge rounded-pill bg-dark bg-opacity-25 d-lg-none ">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                        <span class="badge rounded-pill bg-dark bg-opacity-25 d-none d-lg-block ">Boolean mobile app</span>
+                        <span class="badge rounded-pill bg-dark bg-opacity-25 d-none d-lg-block ">Boolean web app</span>
+                        <span class="badge rounded-pill bg-dark bg-opacity-25 d-none d-lg-block ">Boolean blog app</span>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column order-lg-2">
+
+                    <h6>Studenti online negli ultimi 30 minuti</h6>
+
+                    <span class="fs-3">125</span>
 
                 </div>
 
-                
+            </div>
+
+            <!-- Core Content -->
+            <div class="border border-danger container-fluid pt-4 overflow-auto bg-body-secondary">
+
+                <!-- list group -->
+                <div class="card" >
+
+                    <div class="card-header">
+                      <h1>Prossime Classi</h1>
+                    </div>
+
+                    <div class="container">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+
+                                <div>
+                                    <span>Nome</span>
+                                </div>
+
+                                <div class="d-flex justify-content-around gap-5 w-50">
+                                    <span class="d-none d-md-block">Data inizio</span>
+                                    <span class="d-none d-md-block">ROI</span>
+                                    <span>Stato</span>
+                                    <span>Azioni</span>
+
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 75</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5 w-50">
+
+                                    <span class="d-none d-md-block">15 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-success">Done</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 76</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5 w-50">
+
+                                    <span class="d-none d-md-block">16 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-success">Done</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 77</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5  w-50">
+
+                                    <span class="d-none d-md-block">17 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-warning text-light">process</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 78</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5  w-50">
+
+                                    <span class="d-none d-md-block">18 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-success">Done</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 79</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5  w-50">
+
+                                    <span class="d-none d-md-block">19 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-danger">failed</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 80</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5  w-50">
+
+                                    <span class="d-none d-md-block">20 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-success">Done</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 81</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5  w-50">
+
+                                    <span class="d-none d-md-block">21 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-danger">failed</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="container list-group-item d-flex justify-content-between">
+
+                                <div class="d-flex gap-2">
+                                    <i class="mg_logo_lista fa-solid fa-code bg-danger text-light rounded-circle "></i>
+                                    <span>Classe 82</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center gap-5 w-50">
+
+                                    <span class="d-none d-md-block">22 Feb 2021</span>
+                                    <span class="d-none d-md-block">20%</span>
+                                    <span class="badge text-bg-success">Done</span>
+                                    <span>
+                                        <i class="fa-solid fa-pencil btn btn-outline-secondary px-2"></i>
+                                        <i class="fa-solid fa-trash btn btn-outline-secondary px-2"></i>
+                                    </span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- faq section -->
+                <div class="mt-4">
+
+                    <div class="card">
+
+                        <div class="card-header">
+                          <h1>F.A.Q.</h1>
+                        </div>
+
+                        <div class=" container accordion accordion-flush py-3" id="accordionFlushExample">
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Come aggiungere un nuovo studente
+                                    </button>
+
+                                </h2>
+
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                                    <div class="accordion-body">
+                                        Clicca sul + in alto nella sezione blu*.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Come posso acceder alle informazioni del mio accout
+                                    </button>
+
+                                </h2>
+
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                                    <div class="accordion-body">
+                                        Clicca sull'icona della capmanella
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        Posso usare questa dashboard da mobile?
+                                    </button>
+
+                                </h2>
+
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+                                    <div class="accordion-body">
+                                        Si puoi usare questa dashboard da mobile.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- todo section -->
+                <div class="mt-4">
+
+                    <div class="card" >
+
+                        <div class="card-header">
+                          <h1>Todo</h1>
+                        </div>
+
+                        <div class="container my-3">
+
+                            <ul class="list-group">
+
+                                <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
+                                </li>
+
+                                <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75 </label>
+                                </li>
+
+                                <li class="list-group-item">
+                                <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- report active users -->
+                <div class="mt-4 container card py-3">
+
+                    <div class="card">
+
+                        <img src="./assets/img/stats.jpeg" class="card-img-top" alt="...">
+
+                        <div class="card-body">
+
+                          <h5 class="card-title">Utenti attivi</h5>
+                          <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+
+                        </div>
+
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Gennaio: 1200</li>
+                          <li class="list-group-item">Febbraio: 800</li>
+                          <li class="list-group-item">Marzo: 1500</li>
+                        </ul>
+
+                        <div class="card-body">
+
+                          <a href="#" class="card-link">Visualizza report approfondito</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 

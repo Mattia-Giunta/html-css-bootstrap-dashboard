@@ -2,6 +2,10 @@
     width: 50px;
 }
 
+.mg_logo_lista{
+    padding: 7px 5px;
+}
+
 main #sidebar{
     background-image: url(../img/sidebar-bg.png);
     background-repeat: no-repeat;

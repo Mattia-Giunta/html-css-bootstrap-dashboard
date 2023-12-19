@@ -12,3 +12,14 @@ main #sidebar{
     background-position: center;
     background-size: cover;
 }
+
+.md_list_name{
+    gap: 60px;
+}
+
+.mg_list_process{
+    gap: 45px;
+}
+
+/* terminato esercizio */
+
